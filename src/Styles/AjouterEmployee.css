@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.img2 {
+  width: 80px;
+  margin: 0 auto;
+  display: block;
+}
+
+.centerAjoutForm {
+  background: rgb(255, 255, 255);
+  height: 100%;
+  padding: 50px;
+  border-radius: 10px;
+  overflow: auto;
+}
+
+.centerAjoutForm input {
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+.control input {
+  width: 100%;
+  display: block;
+  padding: 10px;
+  color: #222;
+  outline: none;
+  margin: 1em 0;
+}
+
+.password-control {
+  position: relative;
+}
+
+.password-input-container {
+  display: flex;
+}
+
+.password-input-container input[type="password"] {
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 10px;
+  width: calc(100%);
+}
+
+.password-input-container button {
+  position: absolute;
+  top: 60%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+}
