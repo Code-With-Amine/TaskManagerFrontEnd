@@ -33,8 +33,6 @@ function Employeurs() {
         setEmployeurs(res.data.employees);
       } catch (error) {
         console.error("Error fetching employees:", error);
-        // Retry the request after a delay (e.g., 5 seconds)
-        setTimeout(fetchEmployees, 5000);
         swal({
           title: "Error!",
           text: "something went wrong while fetching employees",
@@ -76,7 +74,9 @@ function Employeurs() {
               </div>
               <div className="col-4">{employeur.full_name}</div>
               <div className="col-3">{employeur.points} pt</div>
-              <div className="col-2">{employeur.points === 0 ? "" : emojis[index] || "🎖️"}</div>
+              <div className="col-2">
+                {employeur.points === 0 ? "" : emojis[index] || "🎖️"}
+              </div>
             </div>
           ))}
       </div>
