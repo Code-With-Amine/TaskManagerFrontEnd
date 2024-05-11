@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import Sidebar from "../components/SideBare";
 import HeaderEmployee from "../components/HeaderEmployee";
 import { useLogedInContext } from "../provider/logedInUser";
-import { headers } from "../functions/getHeaders";
 import swal from "sweetalert";
 import "../Styles/ChangePassword.css";
 
@@ -55,6 +54,10 @@ const ChangePassword: React.FC = () => {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const headers = {
+      Accept: "application/json",
+      Authorization: `Bearer ${localStorage.getItem("token")}`,
+    }
     try {
       const token = localStorage.getItem("token");
       if (!token) {

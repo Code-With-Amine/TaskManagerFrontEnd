@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import { axiosClient } from "../Api/axios";
 import { useNavigate } from "react-router-dom";
 import { IoPerson } from "react-icons/io5";
-import { headers } from "../functions/getHeaders";
-import { userId } from "../functions/getUserId";
 import swal from "sweetalert";
 
 interface Employee {
@@ -26,6 +24,15 @@ function Employeurs() {
 
   useEffect(() => {
     const fetchEmployees = async () => {
+      const userItem = localStorage.getItem("user");
+      const userId = userItem ? JSON.parse(userItem).id : null;
+      const token = localStorage.getItem("token");
+
+      const headers = {
+        Accept: "application/json",
+        Authorization: `Bearer ${token}`,
+      };
+
       try {
         const res = await axiosClient.get(`/firstFiveEmployees/${userId}`, {
           headers,

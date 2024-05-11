@@ -2,8 +2,6 @@ import { useState, useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
 import { AxiosResponse } from "axios";
 import { axiosClient } from "../Api/axios";
-import { headers } from "../functions/getHeaders";
-import { userId } from "../functions/getUserId";
 
 interface Employee {
   id: number;
@@ -19,6 +17,15 @@ function TaskCompletionChart(): JSX.Element {
 
   useEffect(() => {
     const fetchTasksCompletedData = async () => {
+      const userItem = localStorage.getItem("user");
+      const userId = userItem ? JSON.parse(userItem).id : null;
+      const token = localStorage.getItem("token");
+
+      const headers = {
+        Accept: "application/json",
+        Authorization: `Bearer ${token}`,
+      };
+
       try {
         const res: AxiosResponse<{ employees: Employee[] }> =
           await axiosClient.get(`/firstFiveEmployees/${userId}`, { headers });

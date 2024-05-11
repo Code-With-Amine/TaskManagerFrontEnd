@@ -1,6 +1,13 @@
 import { axiosClient } from "../Api/axios";
-import { headers } from "./getHeaders";
-import { userId } from "../functions/getUserId";
+
+const userItem = localStorage.getItem("user");
+const userId = userItem ? JSON.parse(userItem).id : null;
+const token = localStorage.getItem("token");
+
+const headers = {
+  Accept: "application/json",
+  Authorization: `Bearer ${token}`,
+};
 
 export const fetchTasks = async () => {
   try {
