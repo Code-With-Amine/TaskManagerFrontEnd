@@ -210,7 +210,7 @@ const ChangePassword: React.FC = () => {
           </form>
         </div>
         <img
-          src="/public/Image201.png"
+          src="Image201.png"
           className="main-psw col-md-5 d-md-block d-none"
         />
       </section>

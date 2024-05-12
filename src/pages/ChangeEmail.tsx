@@ -146,7 +146,7 @@ const ChangeEmail: React.FC = () => {
           </form>
         </div>
         <img
-          src="/public/Image20.png"
+          src="Image20.png"
           className="main-psw col-md-5 d-md-block d-none"
         />
       </section>
