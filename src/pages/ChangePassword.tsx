@@ -57,7 +57,7 @@ const ChangePassword: React.FC = () => {
     const headers = {
       Accept: "application/json",
       Authorization: `Bearer ${localStorage.getItem("token")}`,
-    }
+    };
     try {
       const token = localStorage.getItem("token");
       if (!token) {
@@ -67,8 +67,8 @@ const ChangePassword: React.FC = () => {
 
       if (formData.password !== formData.password_confirmation) {
         swal({
-          title: "warining!",
-          text: "Passwords mismatch",
+          title: "Attention!",
+          text: "Les mots de passe ne correspondent pas",
           icon: "warning",
           buttons: {
             confirm: {
@@ -97,7 +97,7 @@ const ChangePassword: React.FC = () => {
         { headers }
       );
       swal({
-        title: "sucessfully",
+        title: "Succès",
         text: response.data.message,
         icon: "success",
         buttons: {
@@ -110,8 +110,8 @@ const ChangePassword: React.FC = () => {
     } catch (error) {
       console.error("Erreur lors de la soumission du formulaire :", error);
       swal({
-        title: "Error!",
-        text: "something went wrong try again",
+        title: "Erreur!",
+        text: "Quelque chose s'est mal passé, veuillez réessayer",
         icon: "error",
         buttons: {
           confirm: {
@@ -190,15 +190,15 @@ const ChangePassword: React.FC = () => {
                   >
                     {input.name === "actuelPassword"
                       ? showActuelPassword
-                        ? "Hide"
-                        : "Show"
+                        ? "Masquer"
+                        : "Afficher"
                       : input.name === "password"
                       ? showNewPassword
-                        ? "Hide"
-                        : "Show"
+                        ? "Masquer"
+                        : "Afficher"
                       : showConfirmNewPassword
-                      ? "Hide"
-                      : "Show"}
+                      ? "Masquer"
+                      : "Afficher"}
                   </button>
                 </div>
               </div>

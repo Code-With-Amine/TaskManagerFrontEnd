@@ -40,8 +40,8 @@ const ChangeEmail: React.FC = () => {
       }
       if (formData.email !== formData.email_confirmation) {
         swal({
-          title: "warining!",
-          text: "Email mismatch",
+          title: "Attention!",
+          text: "Les adresses e-mail ne correspondent pas",
           icon: "warning",
           buttons: {
             confirm: {
@@ -65,7 +65,7 @@ const ChangeEmail: React.FC = () => {
       const data = response.data[logedIn];
       localStorage.setItem(logedIn, data);
       swal({
-        title: "sucessfully",
+        title: "Succès",
         text: response.data.message,
         icon: "success",
         buttons: {
@@ -78,8 +78,8 @@ const ChangeEmail: React.FC = () => {
     } catch (error) {
       console.error("Erreur lors de la soumission du formulaire :", error);
       swal({
-        title: "Error!",
-        text: "something went wrong try again",
+        title: "Erreur!",
+        text: "Quelque chose s'est mal passé, veuillez réessayer",
         icon: "error",
         buttons: {
           confirm: {
@@ -112,17 +112,17 @@ const ChangeEmail: React.FC = () => {
           <form onSubmit={handleSubmit}>
             {[
               {
-                label: "Email actuel",
+                label: "Adresse e-mail actuelle",
                 name: "actuelEmail",
                 value: formData.actuelEmail,
               },
               {
-                label: "Nouveau email",
+                label: "Nouvelle adresse e-mail",
                 name: "email",
                 value: formData.email,
               },
               {
-                label: "Confirmer email",
+                label: "Confirmer la nouvelle adresse e-mail",
                 name: "email_confirmation",
                 value: formData.email_confirmation,
               },
