@@ -168,7 +168,7 @@ const LoginPage: React.FC = () => {
             className="forget__password"
             onClick={() => navigate("/forgottenpassword")}
           >
-            Forgotten Password? Rset it
+            Mot de passe oublié? Réinitialisez-le{" "}
           </span>
           <button type="submit" className="submit__button">
             Continuer
