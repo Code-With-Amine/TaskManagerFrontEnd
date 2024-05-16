@@ -1,12 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
 import LogedInUser from "./provider/logedInUser";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <LogedInUser>
-      <App />
-    </LogedInUser>
-  </React.StrictMode>
-);
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+
+const renderApp = () => {
+  const App = React.lazy(() => import("./App"));
+
+  ReactDOM.createRoot(document.getElementById("root")!).render(
+    <React.StrictMode>
+      <LogedInUser>
+        <React.Suspense fallback={<div>Loading...</div>}>
+          <App />
+        </React.Suspense>
+      </LogedInUser>
+    </React.StrictMode>
+  );
+};
+
+renderApp();
+serviceWorkerRegistration.register();

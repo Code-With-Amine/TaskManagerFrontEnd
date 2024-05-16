@@ -13,6 +13,8 @@ import ForgottenPassword from "../pages/ForgottenPassword";
 import UpdatePassword from "../pages/UpdatePassword";
 import Logout from "../components/Logout";
 
+
+
 export const router = createBrowserRouter([
   {
     path: "/update-password/:email",
@@ -71,3 +73,5 @@ export const router = createBrowserRouter([
     element: <p>not Found</p>,
   },
 ]);
+
+
