@@ -13,7 +13,11 @@ import { ExpirationPlugin } from 'workbox-expiration';
 import { precacheAndRoute, createHandlerBoundToURL } from 'workbox-precaching';
 import { registerRoute } from 'workbox-routing';
 import { StaleWhileRevalidate } from 'workbox-strategies';
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> e38122a28e1a4e28d7154b0f6da0038c87782093
 declare const self: ServiceWorkerGlobalScope;
 
 clientsClaim();

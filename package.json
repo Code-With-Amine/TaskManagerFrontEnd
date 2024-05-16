@@ -8,7 +8,11 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
+<<<<<<< HEAD
     "serve": "serve -s dist"
+=======
+    "dist": "vite build"
+>>>>>>> e38122a28e1a4e28d7154b0f6da0038c87782093
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
@@ -34,9 +38,18 @@
     "workbox-strategies": "^7.1.0"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "@types/node": "^20.12.12",
+=======
+    "@types/node": "^20.12.11",
+>>>>>>> e38122a28e1a4e28d7154b0f6da0038c87782093
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
+    "@types/workbox-core": "^5.0.0",
+    "@types/workbox-expiration": "^5.0.0",
+    "@types/workbox-precaching": "^5.0.0",
+    "@types/workbox-routing": "^5.0.0",
+    "@types/workbox-strategies": "^5.0.0",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react": "^4.2.1",
@@ -45,6 +58,11 @@
     "eslint-plugin-react-refresh": "^0.4.6",
     "serve": "^14.2.3",
     "typescript": "^4.9.5",
+<<<<<<< HEAD
     "vite": "^5.2.11"
+=======
+    "vite": "^5.2.0",
+    "vite-plugin-pwa": "^0.20.0"
+>>>>>>> e38122a28e1a4e28d7154b0f6da0038c87782093
   }
 }

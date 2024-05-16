@@ -12,6 +12,8 @@ import Register from "../pages/RegisterPage";
 import ForgottenPassword from "../pages/ForgottenPassword";
 import UpdatePassword from "../pages/UpdatePassword";
 import Logout from "../components/Logout";
+import * as serviceWorkerRegistration from '../serviceWorkerRegistration';
+
 
 
 
@@ -73,5 +75,9 @@ export const router = createBrowserRouter([
     element: <p>not Found</p>,
   },
 ]);
+<<<<<<< HEAD
 
 
+=======
+serviceWorkerRegistration.register();
+>>>>>>> e38122a28e1a4e28d7154b0f6da0038c87782093
