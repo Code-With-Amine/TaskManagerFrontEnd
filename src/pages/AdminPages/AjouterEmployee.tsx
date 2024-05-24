@@ -76,7 +76,7 @@ const AjouterEmployee: React.FC = () => {
       console.error("Erreur lors de l'ajout de l'employé :", error);
       swal({
         title: "Error!",
-        text: "something went wrong try again",
+        text: "something went wrong try again The email may already be taken",
         icon: "error",
         buttons: {
           confirm: {

@@ -79,7 +79,7 @@ const RegisterFormContent = () => {
       console.log(e);
       swal({
         title: "Error!",
-        text: "something went wrong try again",
+        text: "something went wrong try again with a different email address or password",
         icon: "error",
         buttons: {
           confirm: {
